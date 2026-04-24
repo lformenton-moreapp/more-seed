@@ -34,6 +34,7 @@
 
 * { margin:0; padding:0; box-sizing:border-box; }
 
+html { height: 100%; }
 body {
   background: var(--navy);
   color: var(--text);
@@ -137,15 +138,15 @@ body {
   flex: 1;
   overflow: hidden;
   position: relative;
+  height: 100%;
 }
 
 /* Pages */
 .page { display: none; width: 100%; height: 100%; }
-.page.active { display: block; }
+.page.active { display: block; overflow-y: auto; }
 
 /* ── MAP PAGE ─────────────────────────────── */
 #page-map {
-  display: none;
   overflow: auto;
   padding: 40px;
 }
@@ -289,12 +290,12 @@ body {
 }
 .tc-gate strong { color: var(--text); font-weight: 400; }
 
-.tc-body {
+.tc-.tc-.tc-.tc-body {
   max-height: 0;
   overflow: hidden;
   transition: max-height .4s ease;
 }
-.tranche-card.open .tc-body { max-height: 400px; }
+.tranche-card.open .tc-.tranche-card.open .tc-.tc-.tc-body { max-height: 400px; }
 
 .tc-detail {
   padding: 16px 20px;
@@ -456,7 +457,7 @@ body {
 }
 .panel-close:hover { background: var(--surface-hover); color: var(--text); }
 
-.panel-body {
+.panel-.panel-.panel-.panel-body {
   flex: 1;
   overflow-y: auto;
   padding: 24px 28px;
@@ -518,7 +519,6 @@ body {
 
 /* ── STORY PAGE ───────────────────────────── */
 #page-story {
-  display: none;
   overflow-y: auto;
   padding: 40px 60px 60px;
 }
@@ -578,7 +578,7 @@ body {
   margin-bottom: 14px;
   max-width: 560px;
 }
-.sb-body {
+.sb-.sh-sub {
   font-size: 15px;
   color: var(--text-muted);
   font-weight: 300;
@@ -586,7 +586,7 @@ body {
   max-width: 560px;
   margin-bottom: 10px;
 }
-.sb-body strong { color: var(--text); font-weight: 400; }
+.sb-.sh-sub strong { color: var(--text); font-weight: 400; }
 
 .pillars-row {
   display: grid;
@@ -618,7 +618,7 @@ body {
 .pillar-icon.sw  { background: var(--sw-dim); color: var(--sw); }
 .pillar-icon.op  { background: var(--spe2-dim); color: var(--spe2); }
 .pillar-name { font-size: 14px; font-weight: 500; color: var(--text); }
-.pillar-body { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+.pillar-.pillar-.pillar-.pillar-body { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
 .pillar-tag {
   display: inline-block;
   font-size: 10px;
@@ -658,7 +658,7 @@ body {
 .sw-model:hover { border-color: var(--border-bright); }
 .swm-num { font-size: 10px; color: var(--text-dim); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 6px; }
 .swm-title { font-size: 14px; color: var(--text); margin-bottom: 6px; font-weight: 400; }
-.swm-body { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+.swm-.sb-.sb-.sb-body { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
 
 .timeline {
   display: flex;
@@ -721,7 +721,7 @@ body {
 .lim-num.n2 { color: var(--gold); }
 .lim-num.n3 { color: var(--spe2); }
 .lim-title { font-size: 13px; color: var(--text); margin-bottom: 6px; font-weight: 400; }
-.lim-body  { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+.lim-.lim-.lim-.lim-body  { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
 
 .story-divider {
   height: 1px;
@@ -731,7 +731,6 @@ body {
 
 /* ── FLOW PAGE ────────────────────────────── */
 #page-flow {
-  display: none;
   overflow-y: auto;
   padding: 40px;
 }
@@ -811,7 +810,7 @@ body {
 <nav class="sidenav">
   <div class="logo">
     <div class="logo-mark">more</div>
-    <div class="logo-sub">Seed · R$ 3.300.000</div>
+    <div class="logo-sub">Seed · R$ 3.000.000</div>
   </div>
 
   <div class="nav-section">
@@ -828,244 +827,252 @@ body {
       <div class="nav-dot"></div>
       Fluxo de Caixa
     </div>
+
   </div>
 
   <div class="nav-spacer"></div>
 
   <div class="nav-total">
     <div class="nt-label">Total Seed</div>
-    <div class="nt-value">R$ 3,3MM</div>
-    <div class="nt-sub">Valuation R$ 33MM · 10%</div>
+    <div class="nt-value">R$ 3MM</div>
+    <div class="nt-sub">Valuation R$ 37,5MM · 8%</div>
   </div>
 </nav>
 
 <!-- MAIN -->
 <main class="main">
 
-<!-- ═══════════ PAGE: MAP ═══════════ -->
-<div class="page" id="page-map">
+<div class="page active" id="page-map">
   <div class="map-header animate">
     <h1>Detalhamento do<br>Investimento Seed</h1>
-    <p>18 meses · RI aprovado · MVP operacional · SPE2 iniciada</p>
+    <p>18 meses · RI registrado · MVP operacional</p>
   </div>
 
-  <!-- Summary cards -->
   <div class="seed-summary">
-    <div class="summary-card animate stagger-1">
-      <div class="sc-label">Captação</div>
-      <div class="sc-value">R$ 3,3MM</div>
-      <div class="sc-sub">Seed round</div>
-    </div>
-    <div class="summary-card animate stagger-2">
-      <div class="sc-label">Valuation pós-money</div>
-      <div class="sc-value">R$ 33MM</div>
-      <div class="sc-sub">10% participação</div>
-    </div>
-    <div class="summary-card animate stagger-3">
-      <div class="sc-label">Saldo final (set/27)</div>
-      <div class="sc-value">R$163K</div>
-      <div class="sc-sub">Caixa positivo 18M</div>
-    </div>
-    <div class="summary-card animate stagger-4">
-      <div class="sc-label">Saldo mínimo</div>
-      <div class="sc-value">R$ 93K</div>
-      <div class="sc-sub">jul/26 — nunca negativo</div>
-    </div>
+    <div class="sum-card"><div class="sc-label">Captação</div><div class="sc-value">R$ 3MM</div></div>
+    <div class="sum-card"><div class="sc-label">Valuation pós-money</div><div class="sc-value">R$ 37,5MM</div></div>
+    <div class="sum-card"><div class="sc-label">Participação</div><div class="sc-value">8%</div></div>
+
   </div>
 
-  <!-- Split bar -->
-  <div class="split-section animate stagger-3">
-    <div class="split-title">Alocação Holding MORE vs SPE</div>
-    <div class="split-bar-wrap"><div class="split-bar"></div></div>
+  <div class="split-section animate stagger-2">
+    <div class="split-title">Alocação Operação vs Realty</div>
+    <div class="split-bar-wrap"><div class="split-bar" style="background: linear-gradient(90deg, #1565C0 0%, #1565C0 58%, #E65100 58%, #E65100 100%);"></div></div>
     <div class="split-labels">
-      <span class="sl-hold">Holding MORE — R$ 1.551K (47,0%) — Pessoas · Tech · Jurídico · Marketing · Física</span>
-      <span class="sl-spe">Hardware — R$ 1.586K (48,1%) — SPE1 R$793K + SPE2 R$793K · 2 empreendimentos</span>
+      <span class="sl-hold">Operação — R$ 1.740K (58,0%) — Pessoas · Tech · Marketing · Estrutura Física</span>
+      <span class="sl-spe">Realty — R$ 1.260K (42,0%) — projetos + RI + jurídico</span>
     </div>
   </div>
 
-  <!-- Tranches -->
   <div class="split-title animate stagger-4" style="margin-bottom:14px">Estrutura de Tranches</div>
   <div class="tranches-grid animate stagger-4">
 
     <div class="tranche-card t1" onclick="toggleTranche(this)">
-      <div class="tc-header">
+      <div class="tc-header t1">
         <div class="tc-label">T1 · D0 — abr/26</div>
-        <div class="tc-value">R$ 650K</div>
+        <div class="tc-value">R$ 950K</div>
         <div class="tc-date">Fundação MORE + início SPE1</div>
         <div class="tc-arrow">▾</div>
       </div>
-      <div class="tc-gate"><strong>Gatilho:</strong> Assinatura do Contrato de Investimento Seed entre o investidor e a Holding MORE</div>
+      <div class="tc-gate"><strong>Gatilho:</strong> Assinatura do Contrato de Investimento Seed</div>
       <div class="tc-body">
         <div class="tc-detail">
-          <div class="tcd-row">
-            <div class="tcd-icon hw">⚙</div>
-            <div class="tcd-label"><strong>Hardware</strong>Constituição da SPE1 + contratos TAP e São Roque + sondagem + topografia</div>
-          </div>
-          <div class="tcd-row">
-            <div class="tcd-icon sw">◈</div>
-            <div class="tcd-label"><strong>Software</strong>Contratação do time + setup completo da stack (Supabase, Vercel, Wati, IA) + início do app MORE</div>
-          </div>
+          <div class="tcd-row"><div class="tcd-icon hw">⚙</div><div class="tcd-text"><strong>Hardware</strong>Sondagem + topografia + primeiros projetos complementares</div></div>
+          <div class="tcd-row"><div class="tcd-icon sw">◈</div><div class="tcd-text"><strong>Software</strong>Setup da stack tecnológica + início do desenvolvimento MVP</div></div>
+          <div class="tcd-row"><div class="tcd-icon pess">●</div><div class="tcd-text"><strong>Pessoas</strong>Time completo operando desde o primeiro mês</div></div>
         </div>
         <div class="tc-split">
-          <div class="tcs-item hold">
-            <div class="tcs-name">Holding MORE</div>
-            <div class="tcs-val">R$ 497K</div>
-            <div class="tcs-pct">76% da tranche</div>
-          </div>
-          <div class="tcs-item spe">
-            <div class="tcs-name">SPE1</div>
-            <div class="tcs-val">R$ 153K</div>
-            <div class="tcs-pct">24% da tranche</div>
-          </div>
+          <div class="tcs-item hold"><div class="tcs-name">Holding MORE</div><div class="tcs-val">R$ 720K</div><div class="tcs-pct">76% da tranche</div></div>
+          <div class="tcs-item spe"><div class="tcs-name">Realty SPE1</div><div class="tcs-val">R$ 230K</div><div class="tcs-pct">24% da tranche</div></div>
         </div>
       </div>
     </div>
 
     <div class="tranche-card t2" onclick="toggleTranche(this)">
-      <div class="tc-header">
+      <div class="tc-header t2">
         <div class="tc-label">T2 · D+4M — ago/26</div>
-        <div class="tc-value">R$ 1.450K</div>
+        <div class="tc-value">R$ 1.200K</div>
         <div class="tc-date">Plataforma + Aprovação do Projeto</div>
         <div class="tc-arrow">▾</div>
       </div>
-      <div class="tc-gate"><strong>Gatilho:</strong> Projeto arquitetônico protocolado na prefeitura + MVP da plataforma em testes com usuários reais</div>
+      <div class="tc-gate"><strong>Gatilho:</strong> Projeto protocolado na prefeitura + MVP em testes com usuários reais</div>
       <div class="tc-body">
         <div class="tc-detail">
-          <div class="tcd-row">
-            <div class="tcd-icon hw">⚙</div>
-            <div class="tcd-label"><strong>Hardware</strong>Projetos complementares (hidro, elétrico, PPCI) + taxas municipais + CNO + memorial + emolumentos do RI</div>
-          </div>
-          <div class="tcd-row">
-            <div class="tcd-icon sw">◈</div>
-            <div class="tcd-label"><strong>Software</strong>MVP operacional com IA (Wati + GPT-4.1) qualificando leads 24/7 + pipeline no HubSpot + tráfego pago ativo</div>
-          </div>
+          <div class="tcd-row"><div class="tcd-icon hw">⚙</div><div class="tcd-text"><strong>Hardware</strong>Projetos complementares em andamento + aprovações municipais</div></div>
+          <div class="tcd-row"><div class="tcd-icon sw">◈</div><div class="tcd-text"><strong>Software</strong>MVP em testes com primeiros usuários reais</div></div>
+          <div class="tcd-row"><div class="tcd-icon pess">●</div><div class="tcd-text"><strong>Pessoas</strong>Time crescendo — comercial e financeiro entrando</div></div>
         </div>
         <div class="tc-split">
-          <div class="tcs-item hold">
-            <div class="tcs-name">Holding MORE</div>
-            <div class="tcs-val">R$ 546K</div>
-            <div class="tcs-pct">38% da tranche</div>
-          </div>
-          <div class="tcs-item spe">
-            <div class="tcs-name">SPE1</div>
-            <div class="tcs-val">R$ 904K</div>
-            <div class="tcs-pct">62% da tranche</div>
-          </div>
+          <div class="tcs-item hold"><div class="tcs-name">Holding MORE</div><div class="tcs-val">R$ 456K</div><div class="tcs-pct">38% da tranche</div></div>
+          <div class="tcs-item spe"><div class="tcs-name">Realty SPE1</div><div class="tcs-val">R$ 744K</div><div class="tcs-pct">62% da tranche</div></div>
         </div>
       </div>
     </div>
 
     <div class="tranche-card t3" onclick="toggleTranche(this)">
-      <div class="tc-header">
+      <div class="tc-header t3">
         <div class="tc-label">T3 · D+9M — jan/27</div>
-        <div class="tc-value">R$ 1.200K</div>
-        <div class="tc-date">SPE1 Autônoma + SPE2 Ativada</div>
+        <div class="tc-value">R$ 850K</div>
+        <div class="tc-date">SPE1 Autônoma · MVP Operacional</div>
         <div class="tc-arrow">▾</div>
       </div>
-      <div class="tc-gate"><strong>Gatilho:</strong> Registro de Incorporação averbado na matrícula do terreno em cartório até dez/26 — garantia real do investidor seed</div>
+      <div class="tc-gate"><strong>Gatilho:</strong> RI averbado em cartório até dez/26 — garantia real do investidor seed</div>
       <div class="tc-body">
         <div class="tc-detail">
-          <div class="tcd-row">
-            <div class="tcd-icon hw">⚙</div>
-            <div class="tcd-label"><strong>Hardware</strong>SPE1 autônoma: RI registrado em dez/26, lançamento jan/27, CEF ativo. SPE2: sondagem, projetos complementares e RI do 2º empreendimento em andamento</div>
-          </div>
-          <div class="tcd-row">
-            <div class="tcd-icon sw">◈</div>
-            <div class="tcd-label"><strong>Software</strong>Plataforma com 9M de dados reais + pipeline ativo para lançamento SPE1 + plataforma pronta para múltiplas SPEs</div>
-          </div>
+          <div class="tcd-row"><div class="tcd-icon hw">⚙</div><div class="tcd-text"><strong>Hardware</strong>SPE1 autônoma: RI registrado dez/26, lançamento jan/27, CEF ativo</div></div>
+          <div class="tcd-row"><div class="tcd-icon sw">◈</div><div class="tcd-text"><strong>Software</strong>Plataforma operando em ambiente real — IA qualificando leads 24/7</div></div>
         </div>
         <div class="tc-split">
-          <div class="tcs-item hold">
-            <div class="tcs-name">Holding MORE</div>
-            <div class="tcs-val">R$ 407K</div>
-            <div class="tcs-pct">34% da tranche</div>
-          </div>
-          <div class="tcs-item spe2">
-            <div class="tcs-name">SPE2</div>
-            <div class="tcs-val">R$ 793K</div>
-            <div class="tcs-pct">66% da tranche</div>
-          </div>
+          <div class="tcs-item hold"><div class="tcs-name">Holding MORE</div><div class="tcs-val">R$ 289K</div><div class="tcs-pct">34% da tranche</div></div>
+          <div class="tcs-item spe"><div class="tcs-name">Realty SPE1</div><div class="tcs-val">R$ 561K</div><div class="tcs-pct">66% da tranche</div></div>
         </div>
       </div>
     </div>
 
   </div>
 
-  <!-- Categories -->
   <div class="split-title animate stagger-5" style="margin-bottom:14px">Categorias de Gasto</div>
   <div class="cat-grid animate stagger-5">
-
     <div class="cat-card pess" onclick="openPanel('pessoas')">
-      <div class="cc-name">Pessoas</div>
-      <div class="cc-val">R$ 1.066K</div>
-      <div class="cc-pct">32,3% do seed · pago até abr/27</div>
-      <div class="cc-badges">
-        <span class="badge hold">Holding 100%</span>
-      </div>
+      <div class="cc-name">Pessoas</div><div class="cc-val">R$ 1.066K</div>
+      <div class="cc-pct">35,5% do seed · pago até abr/27</div>
+      <div class="cc-badges"><span class="badge hold">Holding 100%</span></div>
     </div>
-
     <div class="cat-card hw" onclick="openPanel('hardware')">
-      <div class="cc-name">Produto & Hardware</div>
-      <div class="cc-val">R$ 1.586K</div>
-      <div class="cc-pct">48,1% do seed · SPE1 + SPE2</div>
-      <div class="cc-badges">
-        <span class="badge spe">SPE1 50%</span>
-        <span class="badge spe2">SPE2 50%</span>
-      </div>
+      <div class="cc-name">Realty</div><div class="cc-val">R$ 1.260K</div>
+      <div class="cc-pct">42,0% do seed · projetos + RI + jurídico</div>
+      <div class="cc-badges"><span class="badge spe">SPE1 100%</span></div>
     </div>
-
     <div class="cat-card sw" onclick="openPanel('software')">
-      <div class="cc-name">Tech & Software</div>
-      <div class="cc-val">R$ 70K</div>
-      <div class="cc-pct">2,1% do seed · pago até abr/27</div>
-      <div class="cc-badges">
-        <span class="badge hold">Holding 100%</span>
-      </div>
+      <div class="cc-name">Tech & Software</div><div class="cc-val">R$ 300K</div>
+      <div class="cc-pct">10,0% do seed · 18 meses</div>
+      <div class="cc-badges"><span class="badge hold">Holding 100%</span></div>
     </div>
-
-    <div class="cat-card jur" onclick="openPanel('juridico')">
-      <div class="cc-name">Estrutura Jurídica</div>
-      <div class="cc-val">R$ 123K</div>
-      <div class="cc-pct">3,7% do seed · pago até abr/27</div>
-      <div class="cc-badges">
-        <span class="badge hold">Hold R$86K</span>
-        <span class="badge spe">SPE R$15K</span>
-      </div>
-    </div>
-
     <div class="cat-card mkt" onclick="openPanel('marketing')">
-      <div class="cc-name">Marketing</div>
-      <div class="cc-val">R$ 200K</div>
-      <div class="cc-pct">6,1% do seed · pago até abr/27</div>
-      <div class="cc-badges">
-        <span class="badge hold">Hold R$138K</span>
-        <span class="badge spe">SPE R$122K</span>
-      </div>
+      <div class="cc-name">Marketing</div><div class="cc-val">R$ 200K</div>
+      <div class="cc-pct">6,7% do seed · pago até abr/27</div>
+      <div class="cc-badges"><span class="badge hold">Hold R$140K</span><span class="badge spe">SPE R$60K</span></div>
     </div>
-
     <div class="cat-card fis" onclick="openPanel('fisica')">
-      <div class="cc-name">Estrutura Física</div>
-      <div class="cc-val">R$ 91K</div>
-      <div class="cc-pct">2,8% do seed · pago até abr/27</div>
-      <div class="cc-badges">
-        <span class="badge hold">Holding 100%</span>
+      <div class="cc-name">Estrutura Física</div><div class="cc-val">R$ 60K</div>
+      <div class="cc-pct">2,0% do seed · pago até abr/27</div>
+      <div class="cc-badges"><span class="badge hold">Holding 100%</span></div>
+    </div>
+    <div class="cat-card cont" onclick="openPanel('contingencia')">
+      <div class="cc-name">Contingência</div><div class="cc-val">R$ 114K</div>
+      <div class="cc-pct">3,8% do seed · saldo residual pior caso</div>
+      <div class="cc-badges"><span class="badge hold">Saldo final set/27</span></div>
+    </div>
+  </div>
+
+  <!-- Estrutura de Capital -->
+  <div style="margin-top:40px;padding-top:32px;border-top:1px solid var(--border)">
+
+    <div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin-bottom:4px">Estrutura de Capital</div>
+    <div style="font-family:'DM Serif Display',serif;font-size:26px;color:#fff;margin-bottom:28px">Linha do Tempo do Investimento</div>
+
+    <!-- CAPITAL SEED -->
+    <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin-bottom:12px">Capital Seed — Equity</div>
+
+    <!-- Tranches visuais -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px">
+
+      <!-- T1 -->
+      <div style="background:rgba(0,194,255,0.08);border:1px solid rgba(0,194,255,0.25);border-radius:10px;padding:14px 16px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <div style="width:24px;height:24px;border-radius:50%;background:var(--cyan);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#0F2340;flex-shrink:0">T1</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#fff">R$ 950K</div>
+        </div>
+        <div style="font-size:10px;color:var(--cyan);margin-bottom:4px">D0 — Abr/26</div>
+        <div style="font-size:12px;color:var(--text-muted);line-height:1.5">Fundação MORE<br>+ Início SPE1</div>
+      </div>
+
+      <!-- T2 -->
+      <div style="background:rgba(240,180,41,0.08);border:1px solid rgba(240,180,41,0.25);border-radius:10px;padding:14px 16px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <div style="width:24px;height:24px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#0F2340;flex-shrink:0">T2</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#fff">R$ 1,2MM</div>
+        </div>
+        <div style="font-size:10px;color:var(--gold);margin-bottom:4px">D+4M — Ago/26</div>
+        <div style="font-size:12px;color:var(--text-muted);line-height:1.5">Plataforma<br>+ Aprovação Projeto</div>
+      </div>
+
+      <!-- T3 -->
+      <div style="background:rgba(45,206,137,0.08);border:1px solid rgba(45,206,137,0.25);border-radius:10px;padding:14px 16px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <div style="width:24px;height:24px;border-radius:50%;background:var(--spe2);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#0F2340;flex-shrink:0">T3</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#fff">R$ 850K</div>
+        </div>
+        <div style="font-size:10px;color:var(--spe2);margin-bottom:4px">D+9M — Jan/27</div>
+        <div style="font-size:12px;color:var(--text-muted);line-height:1.5">SPE1 Autônoma<br>· MVP Operacional</div>
+      </div>
+
+    </div>
+
+    <!-- Linha do tempo horizontal -->
+    <div style="position:relative;margin-bottom:32px;padding:16px 0 8px">
+      <div style="height:2px;background:linear-gradient(90deg,rgba(0,194,255,0.6),rgba(240,180,41,0.6),rgba(45,206,137,0.6));border-radius:2px;margin:0 10px"></div>
+      <div style="display:flex;justify-content:space-between;margin-top:8px">
+        <div style="text-align:center"><div style="font-size:10px;font-weight:600;color:var(--cyan)">D0</div><div style="font-size:10px;color:var(--text-dim)">Abr/26</div></div>
+        <div style="text-align:center"><div style="font-size:10px;font-weight:600;color:var(--gold)">D+4M</div><div style="font-size:10px;color:var(--text-dim)">Ago/26</div></div>
+        <div style="text-align:center"><div style="font-size:10px;color:var(--text-dim)">D+7M</div><div style="font-size:10px;color:var(--text-dim)">Nov/26</div></div>
+        <div style="text-align:center"><div style="font-size:10px;font-weight:600;color:var(--spe2)">D+9M</div><div style="font-size:10px;color:var(--text-dim)">Jan/27</div></div>
+        <div style="text-align:center"><div style="font-size:10px;color:var(--text-dim)">D+12M</div><div style="font-size:10px;color:var(--text-dim)">Abr/27</div></div>
       </div>
     </div>
 
-    <div class="cat-card cont" onclick="openPanel('contingencia')">
-      <div class="cc-name">Contingência</div>
-      <div class="cc-val">R$ 163K</div>
-      <div class="cc-pct">4,9% do seed · saldo residual pior caso</div>
-      <div class="cc-badges">
-        <span class="badge hold">Saldo final set/27</span>
+    <!-- Seed summary -->
+    <div style="text-align:center;font-size:11px;color:var(--text-dim);margin-bottom:28px;padding:8px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid var(--border)">
+      Total Seed: <strong style="color:var(--text)">R$ 3MM</strong> · 
+      <strong style="color:var(--text)">8%</strong> Holding MORE · 
+      Valuation <strong style="color:var(--text)">R$ 37,5MM</strong>
+    </div>
+
+    <!-- CAPITAL PONTE -->
+    <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A78BFA;margin-bottom:12px">Capital Ponte — Dívida SPE</div>
+
+    <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;margin-bottom:16px">
+
+      <!-- Fase A -->
+      <div style="background:rgba(167,139,250,0.08);border:1px solid rgba(167,139,250,0.2);border-radius:10px;padding:16px 18px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <span style="font-size:10px;padding:2px 8px;border-radius:20px;background:rgba(167,139,250,0.15);color:#A78BFA;font-weight:600">FASE A</span>
+          <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#fff">R$ 3MM</div>
+        </div>
+        <div style="font-size:11px;color:#A78BFA;margin-bottom:8px">Pré-lançamento · Até D+9M</div>
+        <div style="font-size:11px;color:var(--text-dim);margin-bottom:6px">Garantia: <span style="color:var(--text-muted)">TAP Construtora</span></div>
+        <div style="font-size:11px;color:var(--text-dim);line-height:1.5">Co-incorporadora · 15 anos · +3.000 unidades · R$ 400MM GERIC</div>
       </div>
+
+      <!-- Gate -->
+      <div style="text-align:center;flex-shrink:0">
+        <div style="background:var(--gold);color:#0F2340;font-size:10px;font-weight:700;padding:8px 12px;border-radius:8px;line-height:1.4">GATE<br>Lançamento</div>
+      </div>
+
+      <!-- Fase B -->
+      <div style="background:rgba(167,139,250,0.08);border:1px solid rgba(167,139,250,0.2);border-radius:10px;padding:16px 18px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <span style="font-size:10px;padding:2px 8px;border-radius:20px;background:rgba(167,139,250,0.15);color:#A78BFA;font-weight:600">FASE B</span>
+          <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#fff">R$ 4MM</div>
+        </div>
+        <div style="font-size:11px;color:#A78BFA;margin-bottom:8px">Pós-lançamento · D+12M em diante</div>
+        <div style="font-size:11px;color:var(--text-dim);margin-bottom:6px">Garantia: <span style="color:var(--text-muted)">Empreendimento + % Recebíveis</span></div>
+        <div style="font-size:11px;color:var(--text-dim);line-height:1.5">Ativado após lançamento · garantia lastreada nas vendas realizadas</div>
+      </div>
+
+    </div>
+
+    <!-- Rodapé -->
+    <div style="text-align:center;font-size:11px;color:var(--text-dim);padding:10px;border-top:1px solid var(--border)">
+      <span style="color:var(--cyan)">Aporte</span> · Exposição de Caixa SPE: <strong style="color:var(--text-muted)">R$ 7MM</strong> · estrutura de garantias em camadas · <span style="color:var(--spe2)">não dilui a Holding MORE</span>
     </div>
 
   </div>
+
 </div>
 
-<!-- ═══════════ PAGE: STORY ═══════════ -->
-<div class="page active" id="page-story">
+
+<div class="page" id="page-story">
   <div class="story-header">
     <div class="sh-eyebrow">MORE — Seed · Plataforma para a Vida</div>
     <div class="sh-title">MORE, plataforma<br>para a vida.</div>
@@ -1140,26 +1147,26 @@ body {
 
   <div class="story-block">
     <div class="sb-eyebrow seed">O investimento</div>
-    <div class="sb-title">R$ 3.300.000 para cruzar o limiar de projeto para negócio.</div>
+    <div class="sb-title">R$ 3.000.000 para cruzar o limiar de projeto para negócio.</div>
     <div class="sb-body">Em 18 meses, o seed financia a transição completa da MORE de ideia para operadora institucional — com ativos reais, plataforma validada e o segundo ciclo já iniciado.</div>
     <div class="timeline">
       <div class="tl-item">
         <div class="tl-dot t1">T1</div>
-        <div class="tl-val">R$ 650K</div>
+        <div class="tl-val">R$ 950K</div>
         <div class="tl-date">abr/26</div>
         <div class="tl-gate">Fundação MORE + início SPE1</div>
       </div>
       <div class="tl-item">
         <div class="tl-dot t2">T2</div>
-        <div class="tl-val">R$ 1.450K</div>
+        <div class="tl-val">R$ 1.200K</div>
         <div class="tl-date">ago/26</div>
         <div class="tl-gate">Plataforma rodando + projeto na prefeitura</div>
       </div>
       <div class="tl-item">
         <div class="tl-dot t3">T3</div>
-        <div class="tl-val">R$ 1.200K</div>
+        <div class="tl-val">R$ 850K</div>
         <div class="tl-date">jan/27</div>
-        <div class="tl-gate">RI registrado dez/26 · SPE2 iniciada</div>
+        <div class="tl-gate">RI registrado dez/26 · SPE1 · MVP</div>
       </div>
     </div>
     <div class="highlight">O Registro de Incorporação do 1º empreendimento é a <strong>garantia real do investidor seed</strong>. A T3 só é liberada quando o RI está registrado em cartório — o ativo existe antes do capital chegar.</div>
@@ -1184,13 +1191,15 @@ body {
       <div class="limiar">
         <div class="lim-num n3">03</div>
         <div class="lim-title">Limiar operacional</div>
-        <div class="lim-body">SPE1 autônoma com CEF ativo, lançamento iniciado e SPE2 em desenvolvimento com os mesmos projetos da SPE1. A máquina de replicação está funcionando.</div>
+        <div class="lim-body">SPE1 autônoma com CEF ativo, lançamento iniciado. A máquina de incorporação está funcionando.</div>
       </div>
     </div>
   </div>
 </div>
 
 <!-- ═══════════ PAGE: FLOW ═══════════ -->
+
+
 <div class="page" id="page-flow">
   <div class="map-header">
     <h1>Fluxo de Caixa</h1>
@@ -1200,6 +1209,7 @@ body {
   <div id="flow-content"></div>
 </div>
 
+</main>
 </main>
 
 <!-- DETAIL PANEL -->
@@ -1255,18 +1265,18 @@ const panels = {
     ]
   },
   hardware: {
-    eyebrow: 'Categoria · SPE1 + SPE2',
-    title: 'Produto & Hardware',
-    value: 'R$ 1.586.000 · SPE1 abr/26–dez/26 · SPE2 jan/27–set/27',
+    eyebrow: 'Categoria · Realty',
+    title: 'Realty',
+    value: 'R$ 1.260.000 · projetos + RI + jurídico · abr/26–set/27',
     rows: [
       { label: 'Empreendimentos', value: '2 × 360 unidades · VGV ~R$95MM cada · MCMV interior SP' },
       { label: 'SPE1 — Timeline', value: 'abr/26–dez/26 · RI registrado dez/26 · lançamento jan/27' },
-      { label: 'SPE2 — Timeline', value: 'jan/27–set/27 · mesmos projetos defasados 9 meses · RI previsto' },
+      
       { label: 'Projetos Arquitetônicos', value: 'R$ 360.000 por empreendimento — absorvidos pela SPE sem desembolso MORE' },
     ],
     split: [
-      { type: 'spe', name: 'SPE1 — 1º empreendimento', val: 'R$ 793.000', pct: '50%' },
-      { type: 'spe2', name: 'SPE2 — 2º empreendimento', val: 'R$ 793.000', pct: '50%' },
+      { type: 'spe', name: 'SPE1 — 1º empreendimento', val: 'R$ 850.000', pct: '50%' },
+      
     ],
     items: [
       { name: 'SPE1 — Sondagem + topografia', detail: 'R$ 25.000 · abr/26', color: '#FF6B35' },
@@ -1276,13 +1286,7 @@ const panels = {
       { name: 'SPE1 — Coordenação + compatibilização', detail: 'R$ 133.000 · out/26', color: '#FF6B35' },
       { name: 'SPE1 — Proj. conclusão + CNO + RI parcial', detail: 'R$ 325.000 · nov/26', color: '#FF6B35' },
       { name: 'SPE1 — Emolumentos RI + memorial', detail: 'R$ 110.000 · dez/26 → RI registrado', color: '#FF6B35' },
-      { name: 'SPE2 — Sondagem + topografia', detail: 'R$ 25.000 · jan/27', color: '#2DCE89' },
-      { name: 'SPE2 — Proj. hidrossanitário (parcial)', detail: 'R$ 40.000 · mar/27', color: '#2DCE89' },
-      { name: 'SPE2 — Proj. elétrico + SPDA (parcial)', detail: 'R$ 80.000 · mai/27', color: '#2DCE89' },
-      { name: 'SPE2 — Proj. PPCI + taxas municipais', detail: 'R$ 80.000 · jun/27', color: '#2DCE89' },
-      { name: 'SPE2 — Coordenação + compatibilização', detail: 'R$ 133.000 · jul/27', color: '#2DCE89' },
-      { name: 'SPE2 — Proj. conclusão + CNO + RI parcial', detail: 'R$ 325.000 · ago/27', color: '#2DCE89' },
-      { name: 'SPE2 — Emolumentos RI + memorial', detail: 'R$ 110.000 · set/27', color: '#2DCE89' },
+
     ]
   },
   software: {
@@ -1370,19 +1374,19 @@ const panels = {
   contingencia: {
     eyebrow: 'Reserva · Saldo residual',
     title: 'Contingência',
-    value: 'R$ 163.200 · 4,9% do seed · pior caso sem receita',
+    value: 'R$ 341,700 · 3,8% do seed · pior caso sem receita',
     rows: [
-      { label: 'Origem', value: 'Saldo residual após financiar Holding (até abr/27), SPE1 (R$793K) e SPE2 (R$793K)' },
+      { label: 'Origem', value: 'Saldo residual após financiar Holding (até abr/27) e Realty SPE1 (R$1.260K)' },
       { label: 'Cenário', value: 'Pior caso — zero receita em 18 meses. Com receita SPE1 a partir de jan/27, a margem cresce.' },
-      { label: 'Saldo mínimo', value: 'R$ 93.480 em jul/26 — caixa positivo em todos os 18 meses' },
+      { label: 'Saldo mínimo', value: 'R$ 141,280 em jul/26 — caixa positivo em todos os 18 meses' },
     ],
     split: [
-      { type: 'hold', name: 'Saldo final set/27', val: 'R$ 163.200', pct: '100%' },
+      { type: 'hold', name: 'Saldo final set/27', val: 'R$ 341,700', pct: '100%' },
     ],
     items: [
       { name: 'Caixa positivo nos 18 meses', detail: 'Nunca negativo — mesmo sem gerar nenhuma receita', color: '#2DCE89' },
-      { name: 'Saldo mínimo', detail: 'R$ 93.480 em jul/26 — antes da T2 entrar', color: '#2DCE89' },
-      { name: 'Saldo final (set/27)', detail: 'R$ 163.200 — contingência real ao fim do seed', color: '#2DCE89' },
+      { name: 'Saldo mínimo', detail: 'R$ 141,280 em jul/26 — antes da T2 entrar', color: '#2DCE89' },
+      { name: 'Saldo final (set/27)', detail: 'R$ 341,700 — contingência real ao fim do seed', color: '#2DCE89' },
     ]
   }
 };
@@ -1447,7 +1451,7 @@ function closePanel() {
 const MONTHS_FC = ['abr/26','mai/26','jun/26','jul/26','ago/26','set/26','out/26',
                 'nov/26','dez/26','jan/27','fev/27','mar/27','abr/27','mai/27',
                 'jun/27','jul/27','ago/27','set/27'];
-const TRANCHE_M = {0:650000, 4:1450000, 9:1200000};
+const TRANCHE_M = {0:950000, 4:1200000, 9:850000};
 
 const team = [
   {nome:'CEO', tipo:'PL', sal:15000, ini:1},
@@ -1477,33 +1481,33 @@ function mc(sal, ini, mi, tipo) {
 
 // HW SPE1 detalhado
 const hwDetail = {
-  0:  [['Sondagem + topografia', 25000]],
-  2:  [['Proj. hidrossanitário (parcial)', 40000]],
-  4:  [['Proj. elétrico + SPDA (parcial)', 80000]],
-  5:  [['Proj. PPCI + taxas municipais', 80000]],
-  6:  [['Coordenação + compatibilização', 133000]],
-  7:  [['Proj. hidrossanitário (conclusão) + CNO', 155000], ['Emolumentos RI (parcial)', 170000]],
-  8:  [['Emolumentos RI (conclusão) + memorial descritivo', 110000]],
+  0:  [['Estudos + sondagem + topografia', 86800]],
+  1:  [['Projetos complementares (parcial)', 86800]],
+  2:  [['Projetos complementares + aprovações', 126800]],
+  3:  [['Coordenação + compatibilização', 106800]],
+  4:  [['Proj. PPCI + taxas municipais', 106800]],
+  5:  [['Assessoria jurídica incorporação', 56800]],
+  6:  [['Despesas cartoriais + registros', 16800]],
+  7:  [['Despesas cartoriais + registros', 26800]],
+  8:  [['Despesas cartoriais + registros', 26800]],
+  9:  [['Emolumentos RI + CNO + memorial', 426800]],
+  10: [['Gestão pós-RI + averbações', 16800]],
+  11: [['Gestão pós-RI + averbações', 16800]],
+  12: [['Gestão pós-RI + averbações', 16800]],
+  13: [['Gestão pós-RI + averbações', 16800]],
+  14: [['Gestão pós-RI + averbações', 16800]],
 };
 
-// SPE2 — R$793K (idêntica SPE1), jan–set/27
-const spe2Detail = {
-  9:  [['SPE2 — Sondagem + topografia', 25000]],
-  11: [['SPE2 — Proj. hidrossanitário (parcial)', 40000]],
-  13: [['SPE2 — Proj. elétrico + SPDA (parcial)', 80000]],
-  14: [['SPE2 — Proj. PPCI + taxas municipais', 80000]],
-  15: [['SPE2 — Coordenação + compatibilização', 133000]],
-  16: [['SPE2 — Proj. hidrossanitário (conclusão) + CNO', 325000]],
-  17: [['SPE2 — Emolumentos RI + memorial descritivo', 110000]],
-};
+// Sem SPE2 neste seed
+const spe2Detail = {};
 
 // Holding T3: financiada pelo seed até abr/27 (meses 9–12)
 // A partir de mai/27 a SPE1 já lançou — Holding se sustenta com receita própria
 const HOLDING_LAST_MI = 12; // abr/27
 
 function techDetail(mi) {
-  const d = [['Stack mensal (Supabase+Vercel+Wati+IA+HubSpot...)', 5000]];
-  if (mi === 0) d.push(['Setup inicial (serviços externos)', 5000]);
+  const d = [['Stack + plataforma (assinaturas mensais)', 10000]];
+  if (mi === 0) d.push(['Setup e configuração inicial', 10000]);
   return d;
 }
 function jurDetail(mi) {
@@ -1523,8 +1527,8 @@ function mktDetail(mi) {
   return d;
 }
 function fisDetail(mi) {
-  const d = [['Coworking (mensalidade)', 4000], ['Despesas operacionais', 1500]];
-  if (mi === 0) d.push(['Equipamentos (notebooks + periféricos)', 20000]);
+  const d = [['Coworking + despesas operacionais', 4000]];
+  if (mi === 0) d.push(['Setup equipamentos', 8000]);
   return d;
 }
 function pessoasDetail(mi) {
@@ -1533,7 +1537,7 @@ function pessoasDetail(mi) {
 }
 
 // Holding ativa apenas até abr/27 (mi <= 12)
-// A partir de mai/27 (mi >= 13): apenas SPE2 no caixa
+// A partir de mai/27 (mi >= 13): holding autossustentável
 const flowData = [];
 let acum = 0;
 for (let mi = 0; mi < 18; mi++) {
@@ -1572,8 +1576,7 @@ for (let mi = 0; mi < 18; mi++) {
 const rowDefs = [
   {key:'entrada', label:'Entradas (tranches)',  color:'#2DCE89', bg:'rgba(45,206,137,0.15)', bold:true,  detail:false},
   {key:'pessoas', label:'Pessoas — Holding',    color:'#F472B6', bg:'rgba(244,114,182,0.1)', bold:false, detail:true},
-  {key:'hw',      label:'Hardware SPE1',         color:'#FF6B35', bg:'rgba(255,107,53,0.1)',  bold:false, detail:true},
-  {key:'spe2',    label:'SPE2',                 color:'#2DCE89', bg:'rgba(45,206,137,0.1)',  bold:false, detail:true},
+  {key:'hw',      label:'Realty',         color:'#FF6B35', bg:'rgba(255,107,53,0.1)',  bold:false, detail:true},
   {key:'tech',    label:'Tech & Software',       color:'#00C2FF', bg:'rgba(0,194,255,0.08)',  bold:false, detail:true},
   {key:'jur',     label:'Jurídico',             color:'#F0B429', bg:'rgba(240,180,41,0.1)',  bold:false, detail:true},
   {key:'mkt',     label:'Marketing',            color:'#A78BFA', bg:'rgba(167,139,250,0.1)', bold:false, detail:true},
@@ -1703,13 +1706,13 @@ function buildFlow() {
   html += `<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px">
     <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:14px 16px">
       <div style="font-size:10px;color:#4A607A;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Saldo final (pior caso)</div>
-      <div style="font-size:20px;font-weight:500;color:#00C2FF">R$163K</div>
+      <div style="font-size:20px;font-weight:500;color:#00C2FF">R$341K</div>
       <div style="font-size:11px;color:#4A607A;margin-top:3px">pior caso · sem receita · abr/27</div>
     </div>
     <div style="background:rgba(45,206,137,0.08);border:1px solid rgba(45,206,137,0.15);border-radius:10px;padding:14px 16px">
-      <div style="font-size:10px;color:#4A607A;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">SPE2 no seed</div>
-      <div style="font-size:20px;font-weight:500;color:#2DCE89">R$ 793K</div>
-      <div style="font-size:11px;color:#4A607A;margin-top:3px">idêntica à SPE1 · jan–set/27</div>
+      <div style="font-size:10px;color:#4A607A;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Saldo contingência</div>
+      <div style="font-size:20px;font-weight:500;color:#2DCE89">R$ 850K</div>
+      <div style="font-size:11px;color:#4A607A;margin-top:3px">projetos + RI + jurídico</div>
     </div>
     <div style="background:rgba(244,114,182,0.08);border:1px solid rgba(244,114,182,0.15);border-radius:10px;padding:14px 16px">
       <div style="font-size:10px;color:#4A607A;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Holding financiada até</div>
@@ -1722,7 +1725,7 @@ function buildFlow() {
     <span>Células <span style="color:#00C2FF">⊕</span> — clique para detalhamento</span>
     <span><span style="color:#F472B6">hold✓</span> — último mês financiado pelo seed</span>
     <span>— células vazias = Holding autossustentável (receita SPE1)</span>
-    <span>Saldo final R$163K — contingência residual pior caso</span>
+    <span>Saldo final R$341K — contingência residual pior caso</span>
   </div></div></div>`;
 
   container.innerHTML = html;
